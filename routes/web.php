@@ -63,3 +63,10 @@ Route::get('admin/post/{id}', [PostController::class, 'show']);
 Route::get('admin/post/{id}/edit', [PostController::class, 'edit']);
 Route::put('admin/post/{id}', [PostController::class, 'update']);
 Route::delete('admin/post/{id}', [PostController::class, 'destroy']);
+
+//Admin Dashboard
+Route::get('/admin/dashboard', function () {
+    return view('admin.dashboard');
+})->name('admin.home');
+Route::get('/test1', [ProductController::class, 'test1']);
+Route::get('/test2', [ProductController::class, 'test2']);
